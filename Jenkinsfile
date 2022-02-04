@@ -19,5 +19,5 @@ pipeline {
                 sh "rm -r ./*"
             }
         }
-    }
+    } 
 }
