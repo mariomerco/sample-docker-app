@@ -5,7 +5,6 @@ pipeline {
         stage('Git Checkout') {
             steps {
                 git(branch: 'main', url: 'https://github.com/mariomerco/sample-docker-app.git')
-                sh("ls")
             }
         }
         
@@ -18,6 +17,12 @@ pipeline {
         stage('Clean') {
             steps {
                 sh "rm -r ./*"
+            }
+        }
+
+        stage('Deployment') {
+            steps {
+                echo "I'm deploying to the Environment ${ENVIRONMENT}"
             }
         }
     }
