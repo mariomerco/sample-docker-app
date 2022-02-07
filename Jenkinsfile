@@ -22,7 +22,7 @@ pipeline {
 
         stage('Deployment') {
             steps {
-                echo 'Im deploying to the Environment ${ENVIRONMENT}'
+                echo "I'm deploying to the Environment ${ENVIRONMENT}"
             }
         }
     }
